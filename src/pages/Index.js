@@ -53,7 +53,7 @@ function Index(props) {
                 <input
                     type="text"
                     value={newForm.img}
-                    name="image URL"
+                    name="img"
                     placeholder="image URL"
                     onChange={handleChange}
                 />
