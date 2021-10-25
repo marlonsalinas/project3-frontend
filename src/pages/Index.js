@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Index(props) {
@@ -16,7 +17,7 @@ function Index(props) {
     // Handle submit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createPic(newForm);
+        props.createAstro(newForm);
         setNewForm({
             night: "",
             img: "",
@@ -26,11 +27,11 @@ function Index(props) {
 
     // loaded function
     const loaded = () => {
-        return props.pic.map((person) => (
-            <div key={pic._id} className='pic'>
-                <Link to={`/astrocollection/${pic._id}`}><h1>{pic.night}</h1></Link>
-                <img src={pic.img} />
-                <h3>{pic.description}</h3>
+        return props.astro.map((astroPic) => (
+            <div key={astroPic._id} className='pic'>
+                <Link to={`/astrocollection/${astroPic._id}`}><h1>{astroPic.night}</h1></Link>
+                <img src={astroPic.img} />
+                <h3>{astroPic.description}</h3>
             </div>
         ));
     };

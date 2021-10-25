@@ -4,35 +4,35 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 
 function Main(props){
-    const [ pic, setPic ] = useState(null);
+    const [ astro, setAstro ] = useState(null);
     const URL = "https://localhost:3000/astrocollection/";
-    const getPic = async () => {
+    const getAstro = async () => {
         const response = await fetch(URL);
         const data = await response.json();
-        setPic(data);
+        setAstro(data);
     };
 
-    const createPic = async (picture) => {
+    const createAstro = async (astroPic) => {
         // post request to create picture entry
         await fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "Application/json",
             },
-            body: JSON.stringify(picture),
+            body: JSON.stringify(astroPic),
         });
         // update collection of pictures
-        getPic();
+        getAstro();
 
     };
 
-    useEffect(() => getPic(), []);
+    useEffect(() => getAstro(), []);
 
     return (
         <main>
             <Switch>
                 <Route exact path='/'>
-                    <Index pic={pic} createPic={createPic} />
+                    <Index astro={astro} createAsto={createAstro} />
                 </Route>
                 <Route
                 path='/astrocollection/:id'
