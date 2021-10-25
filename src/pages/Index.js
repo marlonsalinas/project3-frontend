@@ -11,7 +11,7 @@ function Index(props) {
 
     // handleChange function for form
     const handleChange = (event) => {
-        setNewForm({ ...newForm, [event.target.name]: event.target. value });
+        setNewForm({ ...newForm, [event.target.name]: event.target.value });
     };
 
     // Handle submit function for form
@@ -30,7 +30,7 @@ function Index(props) {
         return props.astro.map((astroPic) => (
             <div key={astroPic._id} className='pic'>
                 <Link to={`/astrocollection/${astroPic._id}`}><h1>{astroPic.night}</h1></Link>
-                <img src={astroPic.img} />
+                <img src={astroPic.img} alt="" />
                 <h3>{astroPic.description}</h3>
             </div>
         ));
