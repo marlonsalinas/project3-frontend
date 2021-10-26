@@ -5,7 +5,7 @@ import Show from "../pages/Show";
 
 function Main(props){
     const [ astro, setAstro ] = useState(null);
-    const URL = "https://localhost:3000/astrocollection/";
+    const URL = "https://localhost:3000/astrocollection";
     const getAstro = async () => {
         const response = await fetch(URL);
         const data = await response.json();
@@ -26,6 +26,19 @@ function Main(props){
 
     };
 
+    const updatedAstro = async (astroPic, id) => {
+        // make PUT request to create people
+        await fetch(URL + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(astroPic),
+        });
+        // update collection of pictures
+        getAstro();
+    }
+
     useEffect(() => getAstro(), []);
 
     return (
@@ -38,6 +51,8 @@ function Main(props){
                 path='/astrocollection/:id'
                 render={(rp) => (
                     <Show
+                    astro={astro}
+                    updatedAstro={updatedAstro}
                         {...rp}
                     />
                 )}

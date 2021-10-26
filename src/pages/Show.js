@@ -1,6 +1,6 @@
 function Show(props) {
     const id = props.match.params.id
-    const people = props.astro
+    const astro = props.astro
     const astroPic = astro.find(p => p._id === id)
 
     return (
