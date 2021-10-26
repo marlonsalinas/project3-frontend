@@ -19,7 +19,7 @@ const Nasa = (props) => {
     // useEffect to run getApod when component mounts
     React.useEffect(() => {
         getApod();
-    }, []);
+    });
 
     // Loaded function for when data is fetched
     const loaded = () => {
