@@ -5,7 +5,7 @@ import Show from "../pages/Show";
 
 function Main(props){
     const [ astro, setAstro ] = useState(null);
-    const URL = "http://localhost:3000/astrocollection";
+    const URL = "https://guarded-oasis-31914.herokuapp.com/astrocollection";
     const getAstro = async () => {
         const response = await fetch(URL);
         const data = await response.json();
