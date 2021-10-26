@@ -47,21 +47,21 @@ function Index(props) {
                     type="text"
                     value={newForm.night}
                     name="night"
-                    placeholder="night"
+                    placeholder="Night of picture"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.img}
                     name="img"
-                    placeholder="image URL"
+                    placeholder="Image URL"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.description}
                     name="description"
-                    placeholder="description"
+                    placeholder="Description"
                     onChange={handleChange}
                 />
                 <input type="submit" value="Add picture to collection" />
