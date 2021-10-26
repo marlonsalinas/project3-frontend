@@ -45,7 +45,7 @@ function Main(props){
         <main>
             <Switch>
                 <Route exact path='/astrocollection'>
-                    <Index astro={astro} createAsto={createAstro} />
+                    <Index astro={astro} createAstro={createAstro} />
                 </Route>
                 <Route
                 path='/astrocollection/:id'
