@@ -5,7 +5,7 @@ import Show from "../pages/Show";
 
 function Main(props){
     const [ astro, setAstro ] = useState(null);
-    const URL = "https://localhost:3000/astrocollection";
+    const URL = "http://localhost:3000/astrocollection";
     const getAstro = async () => {
         const response = await fetch(URL);
         const data = await response.json();
