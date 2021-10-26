@@ -27,7 +27,7 @@ function Main(props){
     };
 
     const updatedAstro = async (astroPic, id) => {
-        // make PUT request to create people
+        // make PUT request to create picture
         await fetch(URL + id, {
             method: "PUT",
             headers: {

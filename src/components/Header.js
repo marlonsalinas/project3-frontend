@@ -7,10 +7,10 @@ function Header(props){
                 <div>Home</div>
             </Link>
             <Link to='/astrocollection'>
-                <div>Astrology Collection</div>
+                <div>Astronomy Collection</div>
             </Link>
             <Link to='/nasacollection'>
-                <div>NASA's Collection</div>
+                <div>NASA's Astronomy Picture of the Day</div>
             </Link>
         </nav>
     );

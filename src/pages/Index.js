@@ -29,9 +29,10 @@ function Index(props) {
     const loaded = () => {
         return props.astro.map((astroPic) => (
             <div key={astroPic._id} className='pic'>
-                <Link to={`/astrocollection/${astroPic._id}`}><h1>{astroPic.night}</h1></Link>
+                <Link to={`/astrocollection/${astroPic._id}`}>
+                    <h1>{astroPic.night}</h1>
+                </Link>
                 <img src={astroPic.img} alt="" />
-                <h3>{astroPic.description}</h3>
             </div>
         ));
     };
@@ -66,7 +67,7 @@ function Index(props) {
                 />
                 <input type="submit" value="Add picture to collection" />
             </form>
-            {props.pic ? loaded() : loading()} 
+            {props.astro ? loaded() : loading()} 
         </section>
     );
 }
