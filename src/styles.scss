@@ -1,5 +1,11 @@
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: #1f2133;
+$contrastcolor: #c5c9e8;
+
+:root {
+    --blue-gray: #747791;
+    --darkblue-gray: #1f2133;
+    --light-gray: #c5c9e8;
+  }
 
 @mixin white-text-black-bg {
   color: $contrastcolor;
@@ -16,15 +22,16 @@ $contrastcolor: white;
 // --------------------------
 
 nav {
-  @include white-text-black-bg;
+  background: var(--light-gray);
   display: flex;
   justify-content: flex-start;
 
   a {
-    @include white-text-black-bg;
+    background-color: var(--light-gray);
+    text-decoration: none;
     div {
       margin: 10px;
-      font-size: large;
+      font-size: 16px;
     }
   }
 }
@@ -54,8 +61,39 @@ div {
 // --------------------------
 
 img {
-  width: 300px;
-  height: 300px;
-  border-radius: 90px;
-  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  border-style:unset;
+  object-fit:initial;
+  position: absolute 
+}
+
+img:hover {
+    width: 175px;
+    height:175px;
+}
+
+body {
+    background: $maincolor;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#indexList {
+    display: inline;
+    padding: 50px 100px 50px 100px;
+    
+    
+}
+
+// ---------------------
+// footer
+// ---------------------
+
+footer {
+    color: white;
 }

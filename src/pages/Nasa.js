@@ -2,7 +2,7 @@ import React from "react";
 
 const Nasa = (props) => {
     // API key from nasa.gov
-    const apiKey = 'irGa9d2OecLrEfnaP89w0CrW8F1okGaKHJadbEEl'
+    const apiKey = 'fakReeRJnXQgtFmRtgBBfjdmtTPy7DYZ9WWUimxo'
     // API URL
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
     
@@ -28,7 +28,7 @@ const Nasa = (props) => {
                 <h1>Night of the picture: {apod.date}</h1>
                 <h2>Title: {apod.title}</h2>
                 <h3>Owner: {apod.copyright}</h3>
-                <img src={apod.url} alt=''/>
+                <img src={apod.url} alt='' />
                 <h2>Description: {apod.explanation}</h2>
             </div>
         );

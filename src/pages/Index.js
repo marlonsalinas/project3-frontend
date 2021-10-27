@@ -28,11 +28,11 @@ function Index(props) {
     // loaded function
     const loaded = () => {
         return props.astro.map((astroPic) => (
-            <div key={astroPic._id} className='pic'>
+            <div key={astroPic._id} className='pic' id='indexList'>
                 <Link to={`/astrocollection/${astroPic._id}`}>
-                    <h1>{astroPic.night}</h1>
-                </Link>
                 <img src={astroPic.img} alt="" />
+                    {/* <h1>{astroPic.night}</h1> */}
+                </Link>
             </div>
         ));
     };
