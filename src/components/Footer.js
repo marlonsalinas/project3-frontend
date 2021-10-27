@@ -1,13 +1,9 @@
 function Footer(props){
     return(
-        <footer>
-            <div>
+        <footer class='footer'>
+            <div class='author'>
                 <a href='https://github.com/marlonsalinas'>
-                    <div>Github</div>
-                </a>
-                
-                <a href='https://www.linkedin.com/in/marlon-salinas-07560a21b/'>
-                    <div>LinkedIn</div>
+                    <p>Github</p>
                 </a>
             </div>
         </footer>

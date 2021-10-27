@@ -43,30 +43,32 @@ function Index(props) {
 
     return (
         <section>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={newForm.night}
-                    name="night"
-                    placeholder="Night of picture"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={newForm.img}
-                    name="img"
-                    placeholder="Image URL"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={newForm.description}
-                    name="description"
-                    placeholder="Description"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Add picture to collection" />
-            </form>
+            <div class='form-container'>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        value={newForm.night}
+                        name="night"
+                        placeholder="Night of picture"
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
+                        value={newForm.img}
+                        name="img"
+                        placeholder="Image URL"
+                        onChange={handleChange}
+                    />
+                    <textarea
+                        type="text"
+                        value={newForm.description}
+                        name="description"
+                        placeholder="Description"
+                        onChange={handleChange}
+                    />
+                    <input type="submit" value="Add picture to collection" />
+                </form>
+            </div>
             {props.astro ? loaded() : loading()} 
         </section>
     );

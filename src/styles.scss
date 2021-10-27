@@ -1,37 +1,50 @@
-$maincolor: #1f2133;
+$maincolor: #0d1f24;
 $contrastcolor: #c5c9e8;
 
 :root {
     --blue-gray: #747791;
     --darkblue-gray: #1f2133;
     --light-gray: #c5c9e8;
-  }
-
-@mixin white-text-black-bg {
-  color: $contrastcolor;
-  background-color: $maincolor;
+    --darkblue: #0d1f24;
 }
 
-@mixin black-test-white-bg {
-  color: $maincolor;
-  background-color: $contrastcolor;
+body {
+    background-image: url(https://media.istockphoto.com/photos/twinkling-star-field-overlay-texture-on-black-background-picture-id938050474?b=1&k=20&m=938050474&s=170667a&w=0&h=D2d9BnYsHXpkidikvqFi1-abDh7doWvatWEpUpzRNJU=);
+    color: white;
 }
+// @mixin white-text-black-bg {
+//   color: $contrastcolor;
+//   background-color: $maincolor;
+// }
+
+// @mixin black-test-white-bg {
+//   color: $maincolor;
+//   background-color: $contrastcolor;
+// }
 
 // --------------------------
 // Header
 // --------------------------
 
 nav {
-  background: var(--light-gray);
   display: flex;
-  justify-content: flex-start;
+  padding: 50px 8%;
+  align-items: center;
 
-  a {
-    background-color: var(--light-gray);
+  ul {
     text-decoration: none;
-    div {
-      margin: 10px;
-      font-size: 16px;
+    flex: 1;
+    text-align: right;
+    color: white;
+    
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 20px
+    }
+    a   {
+        text-decoration: none;
+        color:white;
     }
   }
 }
@@ -40,20 +53,24 @@ nav {
 // Form
 // --------------------------
 
-section,
-div {
+.form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
   form {
-    input {
-      @include white-text-black-bg;
-      padding: 10px;
-      font-size: 1.1em;
-      margin: 10px;
+    //   @include white-text-black-bg;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 10px;
+    color: white;
+    border-style: none;
+    width: 10%;
 
       &[type="submit"]:hover {
-        @include black-test-white-bg;
+        // @include black-test-white-bg;
       }
     }
-  }
 }
 
 // --------------------------
@@ -74,10 +91,6 @@ img:hover {
     height:175px;
 }
 
-body {
-    background: $maincolor;
-    color: white;
-}
 
 a {
     text-decoration: none;
@@ -94,6 +107,16 @@ a {
 // footer
 // ---------------------
 
-footer {
-    color: white;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
 }
+
+
+.text-container {
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 34%;
+}
+

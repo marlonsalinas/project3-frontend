@@ -24,12 +24,19 @@ const Nasa = (props) => {
     // Loaded function for when data is fetched
     const loaded = () => {
         return (
-            <div>
-                <h1>Night of the picture: {apod.date}</h1>
-                <h2>Title: {apod.title}</h2>
-                <h3>Owner: {apod.copyright}</h3>
-                <img src={apod.url} alt='' />
-                <h2>Description: {apod.explanation}</h2>
+            <div class='container-md'>
+                <div class='col'>
+                    <div>
+                        <h1>Night of the picture: {apod.date}</h1>
+                        <h2>Title: {apod.title}</h2>
+                        <h3>Owner: {apod.copyright}</h3>
+                        <h2>Description: {apod.explanation}</h2>
+                    </div>
+                </div>
+                <div class='col'>
+                    <img src={apod.url} alt='' />
+                </div>
+
             </div>
         );
     };
