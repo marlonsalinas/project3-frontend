@@ -25,16 +25,17 @@ const Nasa = (props) => {
     const loaded = () => {
         return (
             <div class='container-md'>
+
                 <div class='col'>
-                    <div>
-                        <h1>Night of the picture: {apod.date}</h1>
-                        <h2>Title: {apod.title}</h2>
-                        <h3>Owner: {apod.copyright}</h3>
-                        <h2>Description: {apod.explanation}</h2>
-                    </div>
+                    <img src={apod.url} alt='' id='apodpic' />
                 </div>
                 <div class='col'>
-                    <img src={apod.url} alt='' />
+                    <div id='apodinfo'>
+                        <p>Night of the picture: {apod.date}</p>
+                        <p>Title: {apod.title}</p>
+                        <p>Owner: {apod.copyright}</p>
+                        <p>Description: {apod.explanation}</p>
+                    </div>
                 </div>
 
             </div>

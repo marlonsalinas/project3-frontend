@@ -12,7 +12,7 @@ function Show(props) {
     return (
         <div className="astroPic">
             <h1>{astroPic.night}</h1>
-            <img src={astroPic.img} alt=''/>
+            <img src={astroPic.img} alt='' class='showimg'/>
             <h2>{astroPic.description}</h2>
             <button id='delete' onclick={removeAstroPic}>
                 Delete picture from collection

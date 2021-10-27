@@ -52,14 +52,14 @@ function Index(props) {
                         placeholder="Night of picture"
                         onChange={handleChange}
                     />
-                    <input
+                    <input 
                         type="text"
                         value={newForm.img}
                         name="img"
                         placeholder="Image URL"
                         onChange={handleChange}
                     />
-                    <textarea
+                    <input
                         type="text"
                         value={newForm.description}
                         name="description"
